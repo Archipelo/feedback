@@ -1,0 +1,76 @@
+---
+name: Bug report
+description: Problems and issues with Archipelo's products
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: "
+        <img src='' align='left' width='80' height='80'>
+        Thank you for finding the time to report the problem!
+
+        We really appreciate your efforts to improve Archipelo.
+        <br clear='left'/>"
+  - type: dropdown
+    attributes:
+      label: Product
+      description: >
+        What product your issue is related to?
+      multiple: true
+      options:
+        - "OneBox - Chrome extension"
+        - "VS Code extension"
+        - "Web application"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Version
+      description: >
+        What is the version of the product this issue is about?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What happened
+      description: Describe what happened.
+      placeholder: >
+        Please provide the context in which the problem occurred and explain what happened
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: What you think should happen instead
+      description: What do you think went wrong?
+      placeholder: >
+        Please explain why you think the behaviour is erroneous. You can include files by
+        dragging and dropping them here.
+  - type: textarea
+    attributes:
+      label: How to reproduce
+      description: >
+        What steps should be taken prior to the moment when the problem occurred.
+      placeholder: >
+        Please make sure you provide a reproducible step-by-step case of how to reproduce the problem
+        as minimally and precisely as possible. We will do our best to investigate the problem,
+        but non-reproducible issues will be closed.
+  - type: input
+    attributes:
+      label: Version of related application
+      description: Is the issue related to Chrome extension or VS Code? Please provide the version.
+      placeholder: >
+        Provide version of Chrome browser / VS Code app
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Anything else
+      description: Anything else we need to know?
+      placeholder: >
+        How often does this problem occur? (Once? Every time? Only when certain conditions are met?)
+        Any relevant logs to include? Put them here inside fenced
+        ``` ``` blocks or inside a foldable details tag if it's long:
+        <details><summary>x.log</summary> lots of stuff </details>
+  - type: markdown
+    attributes:
+      value: "Thanks for completing our form!"
